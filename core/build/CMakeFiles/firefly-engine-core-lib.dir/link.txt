@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libfirefly-engine-core-lib.a "CMakeFiles/firefly-engine-core-lib.dir/src/file_util.cpp.o"
+/Library/Developer/CommandLineTools/usr/bin/ranlib libfirefly-engine-core-lib.a
