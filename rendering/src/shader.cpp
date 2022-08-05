@@ -26,13 +26,46 @@ void Shader::Unbind() const {
 void Shader::ProcessVertexShader(const std::string& path) {
     printf("Processing vert shader: %s\n", path.c_str());
     std::string contents = FileUtil::ReadFile(path);
-    printf("%s\n", contents.c_str());
+
+    const char* shaderSource;
+    shaderSource = contents.c_str();
+    printf("Shader source:\n%s\n", shaderSource);
+
+    vertShaderID = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertShaderID, 1, &shaderSource, NULL);
+    printf("%d\n", glGetError());
+
+    glCompileShader(vertShaderID);
+    printf("Compiled vertex shader\n");
+
+    int success;
+    char infoLog[512];
+    glGetShaderiv(vertShaderID, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetShaderInfoLog(vertShaderID, 512, NULL, infoLog);
+        printf("Compile error: Vertex shader: %s\n", infoLog);
+    }
+    else {
+    }
+
 }
 
 void Shader::ProcessFragmentShader(const std::string& path) {
     printf("Processing frag shader: %s\n", path.c_str());
     std::string contents = FileUtil::ReadFile(path);
     printf("%s\n", contents.c_str());
+    const char* contents_c = contents.c_str();
+    fragShaderID = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragShaderID, 1, &contents_c, NULL);
+    glCompileShader(fragShaderID);
+
+    int success;
+    char infoLog[512];
+    glGetShaderiv(fragShaderID, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetShaderInfoLog(fragShaderID, 512, NULL, infoLog);
+        printf("Compile error: Fragment shader: %s\n", infoLog);
+    }
 }
 
 void Shader::LinkShaderProgram() {

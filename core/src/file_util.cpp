@@ -6,14 +6,11 @@
 
 std::string FileUtil::ReadFile(const std::string& path) {
     std::fstream file(path, std::ios::in);
-    if (file.is_open()) {
-        std::cout << "File opened\n";
-    }
-    std::string contents, string;
+    std::string contents = "", string;
+    std::stringstream str;
+    str << file.rdbuf();
+    file.close();
 
-    while (std::getline(file, string, '\n')) {
-        std::cout << string << std::endl;
-        contents.append(string);
-    }
-    return contents;
+    std::string s = str.str();
+    return s;
 }
