@@ -5,8 +5,8 @@
 #include <sstream>
 
 Shader::Shader(const std::string& vert_path, const std::string& frag_path) {
-    ProcessVertexShader(vert_path);
-    ProcessFragmentShader(frag_path);
+    //ProcessVertexShader(vert_path);
+    //ProcessFragmentShader(frag_path);
     //LinkShaderProgram();
     printf("Shader construction complete [NOT VALID CURRENTLY]\n");
 }
