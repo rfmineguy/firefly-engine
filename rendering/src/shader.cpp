@@ -5,9 +5,9 @@
 #include <sstream>
 
 Shader::Shader(const std::string& vert_path, const std::string& frag_path) {
-    //ProcessVertexShader(vert_path);
-    //ProcessFragmentShader(frag_path);
-    //LinkShaderProgram();
+    ProcessVertexShader(vert_path);
+    ProcessFragmentShader(frag_path);
+    LinkShaderProgram();
     printf("Shader construction complete [NOT VALID CURRENTLY]\n");
 }
 
@@ -32,6 +32,8 @@ void Shader::ProcessVertexShader(const std::string& path) {
     printf("Shader source:\n%s\n", shaderSource);
 
     vertShaderID = glCreateShader(GL_VERTEX_SHADER);
+    printf("%d\n", vertShaderID);
+
     glShaderSource(vertShaderID, 1, &shaderSource, NULL);
     printf("%d\n", glGetError());
 

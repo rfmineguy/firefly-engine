@@ -1,13 +1,15 @@
 #ifndef VIEWPORT_PANEL_H
 #define VIEWPORT_PANEL_H
+
 #include <string>
 #include "Rendering/framebuffer.h"
 #include "Rendering/shader.h"
-#include "../../../vendor/imgui-docking/imgui.h"
+#include "imgui-docking/imgui.h"
 
 class ViewportPanel {
     public:
         static void Show();
+        static void Init();
 
     public:
         static bool visible;

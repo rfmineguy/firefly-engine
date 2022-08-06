@@ -1,13 +1,18 @@
 #include "Editor/panels/viewport_panel.h"
 #include "Rendering/renderer.h"
-#include "../../../vendor/glad/include/glad/glad.h"
-#include "../../../vendor/imgui-docking/imgui.h"
+#include "imgui-docking/imgui.h"
+#include "glad/glad.h"
+#include "Rendering/shader.h"
 
 bool ViewportPanel::visible = true;
 std::string ViewportPanel::name = "ViewportPanel";
 Framebuffer ViewportPanel::framebuffer = Framebuffer();
-Shader ViewportPanel::shader = Shader("../res/default_shader.vert", "../res/default_shader.frag");
 ImVec2 ViewportPanel::last_size = ImVec2();
+
+void ViewportPanel::Init() {
+    ViewportPanel::shader = Shader("../res/default_shader.vert", "../res/default_shader.frag");
+}
+
 void ViewportPanel::Show() {
     static bool firstTime = true;
     if (!visible)

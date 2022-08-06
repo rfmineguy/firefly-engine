@@ -1,5 +1,9 @@
 clang++
-%h %cpp -std=c++17
+%h %hpp %cpp -std=c++17
 -I
 vendor/glad/include/
 vendor/glfw/include/
+vendor/imgui-docking/
+editor/include/
+rendering/include/
+core/include/

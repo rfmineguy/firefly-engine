@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libfirefly-engine-rendering-lib.a "CMakeFiles/firefly-engine-rendering-lib.dir/src/window.cpp.o" "CMakeFiles/firefly-engine-rendering-lib.dir/src/renderer.cpp.o" "CMakeFiles/firefly-engine-rendering-lib.dir/src/framebuffer.cpp.o" "CMakeFiles/firefly-engine-rendering-lib.dir/src/shader.cpp.o"
-/Library/Developer/CommandLineTools/usr/bin/ranlib libfirefly-engine-rendering-lib.a

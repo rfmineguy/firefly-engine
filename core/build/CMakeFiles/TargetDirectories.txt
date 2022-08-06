@@ -1,4 +1,0 @@
-/Users/rileyfischer/Documents/dev/graphics/firefly-engine/core/build/CMakeFiles/firefly-engine-core-exec.dir
-/Users/rileyfischer/Documents/dev/graphics/firefly-engine/core/build/CMakeFiles/firefly-engine-core-lib.dir
-/Users/rileyfischer/Documents/dev/graphics/firefly-engine/core/build/CMakeFiles/edit_cache.dir
-/Users/rileyfischer/Documents/dev/graphics/firefly-engine/core/build/CMakeFiles/rebuild_cache.dir
