@@ -4,9 +4,6 @@
 [submodule "vendor/glm"]
 	path = vendor/glm
 	url = https://github.com/g-truc/glm
-[submodule "vendor/glad"]
-	path = vendor/glad
-	url = https://github.com/Olgardos/glad
 [submodule "vendor/imgui-docking"]
 	path = vendor/imgui-docking
 	url = https://github.com/ocornut/imgui
